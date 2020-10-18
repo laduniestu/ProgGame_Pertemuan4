@@ -15,10 +15,6 @@ public class KubusHitam : MonoBehaviour
         if(gvrStatus) {
             gvrTimer += Time.deltaTime;
             imgCircle.fillAmount = gvrTimer / totalTime;
-            if(imgCircle.fillAmount == 1) {
-                TextMesh hitam = GameObject.Find("Ini Kubus Hitam").GetComponent<TextMesh>();
-                hitam.text = "Ini Kubus Hitam";
-            }
         }   
     }
 
@@ -30,7 +26,5 @@ public class KubusHitam : MonoBehaviour
         gvrStatus = false;
         gvrTimer = 0;
         imgCircle.fillAmount = 0;
-        TextMesh merah = GameObject.Find("Ini Kubus Hitam").GetComponent<TextMesh>();
-        merah.text = "";
     }
 }
